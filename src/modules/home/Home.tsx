@@ -6,6 +6,7 @@ import Branding from './elements/Branding';
 import Benefits from './elements/Benefits';
 import FeatureHighlight from './elements/FeatureHighlight';
 import Pricing from './elements/Pricing';
+import Footer from '../../shared/widgets/footer/Footer';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Benefits />
             <FeatureHighlight />
             <Pricing />
+            <Footer />
         </div>
     );
 }

@@ -45,7 +45,7 @@ const Logo = () => {
                     </g>
                 </g>
             </svg>
-            <h5 className="absolute right-[-45px] xl:right-[-15px] pt-1 font-medium 
+            <h5 className="absolute right-[-25px] xl:right-[-15px] pt-1 font-medium 
                 text-2xl">
                 Freetime
             </h5>
