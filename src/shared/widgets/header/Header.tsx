@@ -7,7 +7,7 @@ import Toolbar from './Toolbar';
 
 const Header = () => {
     return (
-        <header className='w-full sticky top-0 left-0 z-[999] border-b border-[#000]
+        <header className='w-full sticky top-0 left-0 z-[999] border-b border-[#c6c4c4]
             px-10 flex items-center justify-between h-[80px] bg-white text-black'>
             <div>
                 <Link href={'/'}>
