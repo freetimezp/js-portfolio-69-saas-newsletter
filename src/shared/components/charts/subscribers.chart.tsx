@@ -47,6 +47,12 @@ const SubscribersChart = () => {
     },
   ];
 
+  const error = console.error;
+  console.error = (...args: any) => {
+    if (/defaultProps/.test(args[0])) return;
+    error(...args);
+  };
+
   return (
     <div className="my-5 p-5 border rounded bg-white w-full md:h-[55vh] xl:h-[60vh]">
       <div className="w-full flex">
