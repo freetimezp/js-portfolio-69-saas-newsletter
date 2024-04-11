@@ -6,6 +6,7 @@ import { useClerk } from "@clerk/nextjs";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { Button } from "@nextui-org/react";
+import { saveEmail } from "@/actions/save.email";
 
 const Emaileditor = ({ subjectTitle }: { subjectTitle: string }) => {
   const [loading, setLoading] = useState(false);
@@ -29,6 +30,19 @@ const Emaileditor = ({ subjectTitle }: { subjectTitle: string }) => {
   };
 
   const saveDraft = () => {
+    const unlayer = emailEditorRef.current?.editor;
+
+    unlayer?.exportHtml(async (data) => {
+      const { design } = data;
+      await saveEmail({
+        title: subjectTitle,
+        content: JSON.stringify(design),
+        newsLetterOwnerId: user?.id!,
+      }).then((res: any) => {
+        toast.success(res.message);
+        history.push("/dashboard/write");
+      });
+    });
 
   };
 
