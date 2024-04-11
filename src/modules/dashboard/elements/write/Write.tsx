@@ -22,7 +22,6 @@ const Write = () => {
     }
   };
 
-
   return (
     <div className="w-full flex p-5 flex-wrap gap-6 relative">
       <div
