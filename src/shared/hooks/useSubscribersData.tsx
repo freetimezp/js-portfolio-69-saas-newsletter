@@ -21,7 +21,8 @@ const useSubscribersData = () => {
         setData(res);
         setLoading(false);
       })
-      .catch((error) => {
+      .catch((error: any) => {
+        console.log(error.message);
         setLoading(false);
       });
   };
